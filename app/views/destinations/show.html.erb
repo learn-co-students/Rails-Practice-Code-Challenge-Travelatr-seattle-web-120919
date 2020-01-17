@@ -1,0 +1,3 @@
+<h1><%=@destination.name%></h1>
+<p><%=@destination.country%></p>
+<p>Most Popular Post: <%= link_to @destination.most_likes.title, post_path(@destination.most_likes) %></p>

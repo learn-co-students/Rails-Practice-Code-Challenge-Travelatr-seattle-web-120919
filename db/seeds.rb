@@ -26,9 +26,11 @@ end
     Post.create({
       title: Faker::Hipster.sentence(3),
       content: Faker::Hipster.paragraphs(4),
-      likes: 0,
+      likes: 1,
       blogger: blogger,
       destination: Destination.all.sample
     })
   end
 end
+
+puts "seed complete"

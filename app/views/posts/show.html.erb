@@ -1,0 +1,10 @@
+<h1><%= @post.title %></h1>
+<%= @post.content %><br>
+<%= @post.likes %><br>
+<%=link_to @post.blogger.name, blogger_path(@post.blogger)%><br>
+<%=link_to @post.destination.name, destination_path(@post.destination)%><br>
+
+<%= form_for(@post) do |f| %>
+<%= f.hidden_field :likes, value: (@post.likes + 1)%>
+<%= f.submit "Like"%>
+<%end%>
